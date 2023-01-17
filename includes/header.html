@@ -1,0 +1,52 @@
+<head>
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="https://kit.fontawesome.com/62ff51034b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="left">Digital Dairy</div>
+        <div class="right">
+            <div class="forms">
+                <form method="post" class="serach-form" action="search-result.php">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="searchdata" placeholder="Search for note..."
+                            aria-label="Search for..." aria-describedby="btnNavbarSearch" required />
+                        <button class="btn" id="btnNavbarSearch" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    <i class="fa-regular fa-circle-user" style='font-size:36px;'></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Change Password</a>
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        } 
+    </script>
+</body>
